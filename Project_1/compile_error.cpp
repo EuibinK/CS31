@@ -2,7 +2,7 @@
 // Report survey results
 
 #include <iostream>
-using namespace std; // pp. 38-39 in Savitch 6/3 explains this line
+//using namespace std; // pp. 38-39 in Savitch 6/3 explains this line
   // 1) Removing 'using namespace std;' will cause the program to fail to compile correctly. It could be resolved by putting std:: infront of cout's and cin's or by not removing 'using namespace std;'
 
 int main()

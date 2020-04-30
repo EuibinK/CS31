@@ -17,11 +17,12 @@ int main()
   cout << "How many of them say they will return their car for a refund? ";
   cin >> numRefund;
 
-  // if numKeep or numRefund values exceed numberSurveyed, it causes the program to produce incorrect (nonsensical) results while not preventing a successful build.
-
-
   double pctKeep = 100.0 * numKeep / numberSurveyed;
   double pctRefund = 100.0 * numRefund / numberSurveyed;
+
+  // Replacing * with / or vice versa will cause a logical error.
+  // It won't cause any compile errors, but the output won't make any sense either
+
 
   cout.setf(ios::fixed);    // see pp. 32-33 in Savitch 6/e
   cout.precision(1);

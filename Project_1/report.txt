@@ -1,0 +1,59 @@
+Euibin Kim
+CS31
+Project_1: Getting Started With C++
+
+
+
+I. Input I provided in Step 5
+
+I put 1000 for numberSurveyed, 3000 for numKeep and 5000 for numRefund.
+
+Output produced was clearly logically incorrect.
+  300.0% say they will keep their car.
+  500.0% say they will demand a refund.
+  More people will demand a refund than keep their car.
+
+
+II. logic_error.cpp
+
+Switching *'s to /'s or /'s to *'s will cause a logical error.
+
+For example, in the lines,
+
+    double pctKeep = 100.0 * numKeep / numberSurveyed;
+    double pctRefund = 100.0 * numRefund / numberSurveyed;
+
+if /'s are switched to *'s, such as..
+
+    double pctKeep = 100.0 * numKeep * numberSurveyed;
+    double pctRefund = 100.0 * numRefund * numberSurveyed;
+
+the program will produce somewhat nonsensical output:
+  
+  With inputs...
+  
+    numberSurveyed = 100
+    numKeep = 30
+    numRefund = 40
+
+
+  the program will set..
+
+    pctKeep = 300000
+    pctRefund = 400000
+
+
+III. compile_error.cpp
+
+   1) removing line
+      
+        using namespace std;
+
+    without putting std:: in front every cout's and cin's will cause a compile error.
+
+    --> program produces 'use of undeclared identifiers, cin or cout.'
+
+
+  2) removing ;
+
+    --> program produces 'Expected ';' after expression.
